@@ -29,8 +29,8 @@ const info = [
   },
   {
     icon: <FaMapMarkedAlt />,
-    title: "Address",
-    description: "Code Corner Tech Town 1682",
+    title: "Location",
+    description: "Johannesburg, South Africa",
   },
 ];
 
@@ -194,9 +194,10 @@ const Contact = () => {
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="web-development">Web Development</SelectItem>
+                    <SelectItem value="full-stack-development">Full Stack Development</SelectItem>
                     <SelectItem value="ui-ux-design">UI/UX Design</SelectItem>
-                    <SelectItem value="logo-design">Logo Design</SelectItem>
+                    <SelectItem value="branding-identity">Branding & Identity</SelectItem>
+                    <SelectItem value="ai-automation">AI & Automation</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
