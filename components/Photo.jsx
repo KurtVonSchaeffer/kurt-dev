@@ -26,13 +26,13 @@ const Photo = () => {
         }}
         className="w-full h-full max-w-[298px] max-h-[298px] xl:max-w-[498px] xl:max-h-[498px] relative">
         <Image
-         src="/assets/kd.png"
+         src="/assets/kd.jpg"
          priority 
          quality={100}
          width={498}
          height={498}
         alt="Kurt Von Schaeffer - Software Developer"
-         className="object-contain w-full h-full" 
+         className="object-contain w-full h-full mix-blend-lighten"
          sizes="(max-width: 1280px) 298px, 498px"
          />
         </motion.div>
@@ -40,7 +40,7 @@ const Photo = () => {
         {/*circle*/}
         <motion.svg className="absolute inset-0 w-full h-full max-w-[300px] max-h-[300px] xl:max-w-[506px] xl:max-h-[506px]"
         fill="transparent"
-        viewBox=" 0 0 506 506"
+        viewBox="0 0 506 506"
         xmlns="http://www.w3.org/2000/svg"
           >
             <motion.circle 

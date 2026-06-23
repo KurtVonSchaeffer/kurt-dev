@@ -1,5 +1,4 @@
 "use client";
-import { icons, Info } from 'lucide-react';
 import{
   FaHtml5,
   FaCss3,
@@ -12,10 +11,10 @@ FaPython }
   import {SiTailwindcss, SiMysql, SiMongodb, SiNextdotjs,  } from 'react-icons/si';
 
 
-//about me 
+//about me
 const about ={
   title: 'About Me',
-  Description:"Hi, I'm a passionate Software Developer and Graphic Designer with a love for crafting innovative solutions that solve real-world problems. Curiosity fuels my journey, and technology is my playground. I thrive on tackling complex challenges and turning them into seamless, effective solutions. Continuous learning is my mantra, and I enjoy collaborating with others to create meaningful impact while growing together. Whether through code or design, I aim to bring creativity and efficiency to everything I do.",
+  Description:"Senior full stack developer and product owner with 5+ years across the full software development lifecycle — leading development teams and owning platforms end to end. I architect and ship scalable fintech and biotech products, and increasingly automate the work itself, building AI-driven systems that assign developer tasks, streamline onboarding, and generate invoices. Equal parts hands-on engineer, technical architect, and product owner, with a bias for clean code, sound architecture, and shipping.",
   Info:[
     {
       fieldName:"Name",
@@ -23,15 +22,15 @@ const about ={
     },
     {
       fieldName:"Phone",
-      fieldValue:"+27 730867911"
+      fieldValue:"+27 73 086 7911"
     },
     {
       fieldName:"Experience",
-      fieldValue:"2+ years"
+      fieldValue:"5+ years"
     },
     {
       fieldName:"Nationality",
-      fieldValue:"South-African"
+      fieldValue:"South African"
     },
     {
       fieldName:"Email",
@@ -39,58 +38,52 @@ const about ={
     },
     {
       fieldName:"Freelance",
-      fieldValue:"available"
+      fieldValue:"Available"
     },
     {
-      fieldName:"Language",
-      fieldValue:"English,Afrikaans"
+      fieldName:"Languages",
+      fieldValue:"English, Afrikaans"
     },
-
-
-
-
   ]
 };
 //exp
 const experience = {
   icon:'/assets/resume/badge.svg',
   title: ' My Experience',
-  Description:"Experienced Software Developer skilled in JavaScript, React, Node.js, SQL, Java, and Python. I build innovative solutions, solve complex problems, and thrive in collaborative environments.",
+  Description:"5+ years across the full software development lifecycle — from hands-on engineering to leading teams, owning products, and architecting enterprise-grade fintech and biotech platforms.",
   items:[
     {
-      company:"Navertica  SA",
+      company:"Mint",
+      position:"Senior Full Stack Developer & Product Owner",
+      duration:"2025 — Present"
+    },
+    {
+      company:"Navertica cc SA",
       position:"Software Developer",
-      duration:"2024-2025"
+      duration:"2024 — 2025"
     },
     {
       company:"Capital Legacy",
-      position:"Software Developer",
-      duration:"2022-2023"
+      position:"Systems Engineer / Software Developer",
+      duration:"2022 — 2023"
     },
     {
       company:"Amrod",
-      position:"HP READY Graphic layout Artist",
-      duration:"2021-2022"
+      position:"HP READY Graphic Layout Artist",
+      duration:"2021 — 2022"
     },
     {
       company:"Amrod",
       position:"Layout Artist",
-      duration:"2019-2021"
+      duration:"2019 — 2021"
     },
-    {
-      company:"Amrod",
-      position:"junior Layout Artist",
-      duration:"2018-2019"
-    },
-    
-    
   ]
 };
 //EDUCATION
 const education = {
   icon:'/assets/resume/cap.svg',
   title: ' My Education',
-  Description:"Experienced Software Developer skilled in JavaScript, React, Node.js, SQL, Java, and Python. I build innovative solutions, solve complex problems, and thrive in collaborative environments.",
+  Description:"A strong academic foundation in software development and graphic design, backed by continuous self-learning through online courses and certifications.",
   items:[
     {
       institution:"Udemy",
@@ -104,7 +97,7 @@ const education = {
     },
     {
       institution:"Rosebank College",
-      degree:"Information Technologu in Software Development",
+      degree:"Information Technology in Software Development",
       duration:"2015-2020",
     },
     {
@@ -121,54 +114,54 @@ const education = {
 //Skills
 const skills = {
   title:"my skills",
-  Description:" specialize in building efficient, scalable solutions with expertise in both frontend and backend development, delivering seamless end-to-end applications.",
+  Description:"Specialized in building scalable, end-to-end products — from credit engines and AI-driven automation to fintech platforms and biotech systems, using a modern full-stack toolkit.",
   skillList:[
-    {
-      icon:<FaHtml5 />,
-      name:'html 5',
-    },
-    {
-      icon:<FaCss3 />,
-      name:'CSS 3',
-    },
-    {
-      icon:<FaJs />,
-      name:'JavaScipt',
-    },
     {
       icon:<FaReact />,
       name:'React',
     },
     {
       icon:<SiNextdotjs />,
-      name:'Next Js',
-    },
-    {
-      icon:<SiTailwindcss />,
-      name:'tailwind',
+      name:'Next.js',
     },
     {
       icon:<FaNodeJs />,
-      name:'node js ',
+      name:'Node.js',
     },
     {
-      icon:<FaFigma />,
-      name:'figma',
+      icon:<SiTailwindcss />,
+      name:'Tailwind CSS',
     },
     {
-      icon:<SiMysql />,
-      name:'my sql',
+      icon:<FaJs />,
+      name:'TypeScript / JS',
+    },
+    {
+      icon:<FaPython />,
+      name:'Python',
     },
     {
       icon:<SiMongodb />,
-      name:'mongo db',
+      name:'MongoDB',
     },
     {
-      icon: <FaPython />,
-      name: 'Python',
-    }
+      icon:<SiMysql />,
+      name:'MySQL / PostgreSQL',
+    },
+    {
+      icon:<FaFigma />,
+      name:'Figma',
+    },
+    {
+      icon:<FaHtml5 />,
+      name:'HTML 5',
+    },
+    {
+      icon:<FaCss3 />,
+      name:'CSS 3',
+    },
   ]
-  
+
 };
 import{Tabs, TabsContent, TabsList, TabsTrigger} from"@/components/ui/tabs"
 import{

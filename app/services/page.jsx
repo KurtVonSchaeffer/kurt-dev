@@ -6,31 +6,27 @@ import {motion} from "framer-motion";
 const services = [
   {
     num: '01',
-    title: 'Web Development',
-    description:'I build fast, stunning websites that work seamlessly on any device.',
+    title: 'Full Stack Development',
+    description: 'From fintech portals to marketing sites — I architect and ship production-ready web applications using React, Next.js, and Node.js. Fast, secure, and built to scale.',
     href:'/contact'
-
   },
   {
     num: '02',
     title: 'UI/UX Design',
-    description:'Crafting intuitive, beautiful designs that elevate user experience and drive engagement. We turn ideas into seamless, user-friendly interfaces that your audience will love.',
+    description: 'Product-first design applied to complex systems. I turn sophisticated business logic — credit workflows, compliance dashboards, onboarding flows — into interfaces that feel effortless.',
     href:'/contact'
-
   },
   {
     num: '03',
-    title: 'Branding & Design',
-    description: "From custom logos to unique visuals, we create designs that make your brand stand out and leave a lasting impression. Let's bring your vision to life!",
+    title: 'Branding & Identity',
+    description: 'From logo systems to full brand identities. Whether launching a fintech startup or a renewable energy company, I build visual foundations that establish trust and stand out in market.',
     href:'/contact'
-
   },
   {
     num: '04',
-    title: 'Software Development',
-    description:'custom software solutions built to streamline your business and drive innovation.',
+    title: 'AI & Automation',
+    description: 'End-to-end automation for teams and products. AI-driven task assignment, automated onboarding flows, invoice generation, and credit decisioning engines — complex logic shipped cleanly.',
     href:'/contact'
-
   },
 ]
 
@@ -57,12 +53,10 @@ const Services = () => {
               {service.num}
               </div>
             <Link href={service.href}
-            className="w-[70px] h-[70px] rounded-full bg-white
-             group-hover:bg-accent transition-all duration-500 flex 
-             justify-center items-center hover:-rotate-45 cursor-pointer"
-             title="Contact us"
+            className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-300 flex justify-center items-center hover:-rotate-45 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            aria-label={`Contact about ${service.title}`}
              >
-            <BsArrowDownRight className="text-primary text-3xl group-hover:text-primary" />
+            <BsArrowDownRight className="text-primary text-3xl" />
             </Link>
           </div>
           {/*title*/}

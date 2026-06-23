@@ -1,7 +1,8 @@
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
-import Socials from "@/components/Social";
 import Stats from "@/components/Stats";
+import TypewriterRole from "@/components/TypewriterRole";
+import FeaturedWork from "@/components/FeaturedWork";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
@@ -12,13 +13,14 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developer</span>
-            <h1 className="h1 mb-6">
-              Hello I'm<br /> <span className=" text-accent">Kurt Von Schaeffer</span>
+            <h1 className="h1 mb-3">
+              Hello I'm<br /> <span className="text-accent">Kurt Von Schaeffer</span>
             </h1>
+            <TypewriterRole />
             <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at creating elegant digital experiences, combining strong proficiency
-              in various programming languages, technologies, and graphic design
+              Building scalable, enterprise-grade digital products. From automated credit engines
+              and investment ledgers to renewable energy platforms — I engineer complex logic into
+              seamless, modern experiences.
             </p>
             {/* button and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
@@ -52,6 +54,7 @@ const Home = () => {
         </div>
       </div>
       <Stats />
+      <FeaturedWork />
     </section>
   );
 };
