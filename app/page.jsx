@@ -3,13 +3,15 @@ import Social from "@/components/Social";
 import Stats from "@/components/Stats";
 import TypewriterRole from "@/components/TypewriterRole";
 import FeaturedWork from "@/components/FeaturedWork";
+import ParticleFieldLoader from "@/components/ParticleFieldLoader";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
 const Home = () => {
   return (
-    <section className="h-full">
-      <div className="container mx-auto h-full">
+    <section className="h-full relative overflow-hidden">
+      <ParticleFieldLoader />
+      <div className="container mx-auto h-full relative z-10">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
