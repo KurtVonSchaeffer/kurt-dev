@@ -1,5 +1,5 @@
 "use client";
-import { useChat, DefaultChatTransport } from "@ai-sdk/react";
+import { useChat } from "@ai-sdk/react";
 import { useState, useRef, useEffect } from "react";
 import { BsXLg, BsSend } from "react-icons/bs";
 import { FiMessageSquare } from "react-icons/fi";
@@ -16,9 +16,7 @@ export default function AskKurt() {
   const [input, setInput] = useState("");
   const bottomRef = useRef(null);
 
-  const { messages, sendMessage, status } = useChat({
-    transport: new DefaultChatTransport({ api: "/api/chat" }),
-  });
+  const { messages, sendMessage, status } = useChat({ api: "/api/chat" });
   const isStreaming = status === "streaming" || status === "submitted";
 
   useEffect(() => {
