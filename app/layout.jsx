@@ -6,6 +6,7 @@ import './globals.css';  // Corrected path for globals.css
 import Header from "@/components/header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import AskKurt from "@/components/AskKurt";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -46,13 +47,7 @@ export default function RootLayout({ children }) {
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>
-        
-          
-        
-       
-
-          
-        
+        <AskKurt />
       </body>
     </html>
   );

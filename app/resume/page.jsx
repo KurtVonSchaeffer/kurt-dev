@@ -163,6 +163,7 @@ const skills = {
   ]
 
 };
+import FloatingSkills from "@/components/FloatingSkills";
 import{Tabs, TabsContent, TabsList, TabsTrigger} from"@/components/ui/tabs"
 import{
   Tooltip,
@@ -238,32 +239,7 @@ const Resume = () => {
           </TabsContent>
            {/* skills*/}
            <TabsContent value="skills" className="w-full h-full">
-          <div className="flex flex-col gap-[30px]">
-            <div className="flex-col gap-[30px] text-center xl:text-left">
-              <h3 className="text-4xl font-bold">{skills.title}</h3>
-              <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.Description}</p>
-            </div>
-            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-6">
-              {skills.skillList.map((skills, index)=> {
-                return <li key={index}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className=" flex-auto w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                        <div className="text-6xl group-hover:text-accent
-                        transition-all duration-300">
-                          {skills.icon}
-                          </div>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                    <p> {skills.name}</p>
-                  </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                  
-              </li>;
-              })}
-            </ul>
-          </div>
+            <FloatingSkills />
           </TabsContent>
            {/* about me*/}
            <TabsContent value="about me" className="w-full text-center xl:text-left">
