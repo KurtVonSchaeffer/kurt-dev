@@ -16,12 +16,23 @@ export default function AskKurt() {
   const [input, setInput] = useState("");
   const bottomRef = useRef(null);
 
-  const { messages, sendMessage, status } = useChat({ api: "/api/chat" });
+  const { messages, sendMessage, status, setMessages } = useChat({ api: "/api/chat" });
   const isStreaming = status === "streaming" || status === "submitted";
+  const inactivityTimer = useRef(null);
+
+  const resetInactivityTimer = () => {
+    clearTimeout(inactivityTimer.current);
+    inactivityTimer.current = setTimeout(() => {
+      setMessages([]);
+    }, 5 * 60 * 1000); // 5 minutes
+  };
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messages.length > 0) resetInactivityTimer();
   }, [messages]);
+
+  useEffect(() => () => clearTimeout(inactivityTimer.current), []);
 
   const submit = () => {
     const text = input.trim();
