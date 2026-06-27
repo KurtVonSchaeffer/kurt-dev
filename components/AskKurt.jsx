@@ -107,9 +107,7 @@ export default function AskKurt() {
                       : "bg-[#27272c] text-white/90 rounded-bl-sm"
                   }`}
                 >
-                  {m.parts?.map((p, i) =>
-                    p.type === "text" ? <span key={i}>{p.text}</span> : null
-                  ) ?? m.content}
+                  {m.content}
                 </div>
               </div>
             ))}
