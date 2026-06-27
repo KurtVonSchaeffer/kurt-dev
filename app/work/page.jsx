@@ -153,6 +153,17 @@ const projects = [
     github: 'https://github.com/KatoGraphix/weather-app-assesment.git',
     tags: ['Tools'],
   },
+  {
+    num: '14',
+    category: 'Frontend Marketing Site',
+    title: 'ALZ Auto',
+    description: 'A bold, conversion-focused marketing site for an automotive repair and services brand. Features a dark hero, services gallery, and appointment booking flow.',
+    stack: [{ name: 'React' }, { name: 'Tailwind' }, { name: 'Vite' }],
+    Image: '/assets/work/Thumb14.png',
+    live: 'https://alz-auto-react.vercel.app',
+    github: '',
+    tags: ['Web'],
+  },
 ];
 
 const filters = ['All', 'Fintech', 'Web', 'Tools'];
