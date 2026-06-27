@@ -18,7 +18,6 @@ export default function AskKurt() {
 
   const { messages, sendMessage, status } = useChat({ api: "/api/chat" });
   const isStreaming = status === "streaming" || status === "submitted";
-  if (messages.length > 0) console.log("MSG SAMPLE:", JSON.stringify(messages[messages.length - 1]).slice(0, 300));
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -108,7 +107,9 @@ export default function AskKurt() {
                       : "bg-[#27272c] text-white/90 rounded-bl-sm"
                   }`}
                 >
-                  {m.content}
+                  {m.parts?.length > 0
+                    ? m.parts.map((p, i) => p.type === "text" ? <span key={i}>{p.text}</span> : null)
+                    : m.content}
                 </div>
               </div>
             ))}
