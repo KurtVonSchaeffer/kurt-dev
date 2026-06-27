@@ -1,5 +1,7 @@
-import { anthropic } from '@ai-sdk/anthropic';
+import { createGroq } from '@ai-sdk/groq';
 import { streamText } from 'ai';
+
+const groq = createGroq({ apiKey: process.env.GROQ_API_KEY });
 
 const SYSTEM_PROMPT = `You are Kurt Von Schaeffer's personal AI assistant on his portfolio website. You speak on Kurt's behalf in first person — as if you ARE Kurt — but keep responses concise (2-4 sentences max unless asked for detail).
 
@@ -57,7 +59,7 @@ export async function POST(req) {
   const { messages } = await req.json();
 
   const result = streamText({
-    model: anthropic('claude-haiku-4.5'),
+    model: groq('llama-3.3-70b-versatile'),
     system: SYSTEM_PROMPT,
     messages,
     maxTokens: 300,
