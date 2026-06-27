@@ -46,7 +46,7 @@ export default function AskKurt() {
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-accent text-primary font-semibold text-sm px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
       >
         <FiMessageSquare className="text-lg" />
-        Ask Kurt
+        <span className="hidden sm:inline">Ask Kurt</span>
       </button>
 
       {/* Chat panel */}
