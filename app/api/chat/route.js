@@ -56,14 +56,22 @@ Professional, direct, and confident. Passionate about clean architecture and shi
 - If asked something you don't know, say so honestly`;
 
 export async function POST(req) {
-  const { messages } = await req.json();
+  try {
+    const { messages } = await req.json();
 
-  const result = streamText({
-    model: groq('llama-3.3-70b-versatile'),
-    system: SYSTEM_PROMPT,
-    messages,
-    maxTokens: 300,
-  });
+    const result = streamText({
+      model: groq('llama-3.3-70b-versatile'),
+      system: SYSTEM_PROMPT,
+      messages,
+      maxTokens: 300,
+    });
 
-  return result.toUIMessageStreamResponse();
+    return result.toUIMessageStreamResponse();
+  } catch (err) {
+    console.error('Chat API error:', err);
+    return new Response(JSON.stringify({ error: err?.message ?? String(err) }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
 }
