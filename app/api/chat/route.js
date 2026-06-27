@@ -59,10 +59,16 @@ export async function POST(req) {
   try {
     const { messages } = await req.json();
 
+    // Convert UIMessages (parts format) to CoreMessages (content format)
+    const coreMessages = messages.map(m => ({
+      role: m.role,
+      content: m.content ?? m.parts?.filter(p => p.type === 'text').map(p => p.text).join('') ?? '',
+    }));
+
     const result = streamText({
       model: groq('llama-3.3-70b-versatile'),
       system: SYSTEM_PROMPT,
-      messages,
+      messages: coreMessages,
       maxTokens: 300,
     });
 
