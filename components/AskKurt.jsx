@@ -18,6 +18,7 @@ export default function AskKurt() {
 
   const { messages, sendMessage, status } = useChat({ api: "/api/chat" });
   const isStreaming = status === "streaming" || status === "submitted";
+  if (messages.length > 0) console.log("MSG SAMPLE:", JSON.stringify(messages[messages.length - 1]).slice(0, 300));
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
